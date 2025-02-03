@@ -4,9 +4,9 @@ import { default as appInfo } from '../package.json';
 
 export const APP_NAME = appInfo.name;
 
-export const DEFAULT_EDGES: Edge[] = ['roaming'];
+export const DEFAULT_EDGES: Edge[] = ['umatilla', 'ashburn', 'roaming'];
 
-export const DEFAULT_CODEC_PREFERENCES: Call.Codec[] = [Call.Codec.PCMU, Call.Codec.Opus];
+export const DEFAULT_CODEC_PREFERENCES: Call.Codec[] = [Call.Codec.Opus, Call.Codec.PCMU];
 
 export const LOG_LEVEL = process.env.NODE_ENV === 'development' ? 'debug' : 'error';
 

@@ -44,6 +44,7 @@ export enum TestWarnings {
 
 export type Edge =
   | 'ashburn'
+  | 'umatilla'
   | 'dublin'
   | 'frankfurt'
   | 'roaming'

@@ -42,6 +42,7 @@ const initialState: InitialState = {
   dublin: false,
   frankfurt: false,
   roaming: false,
+  umatilla: false,
   'sao-paulo': false,
   singapore: false,
   sydney: false,
@@ -118,8 +119,16 @@ export default function SettingsModal({
             <Grid container>
               <Grid item xs={6}>
                 <FormControlLabel
+                  control={<Checkbox checked={edges.umatilla} onChange={handleEdgeChange} name="umatilla" />}
+                  label="Umatilla"
+                />
+                <FormControlLabel
                   control={<Checkbox checked={edges.ashburn} onChange={handleEdgeChange} name="ashburn" />}
                   label="Ashburn"
+                />
+                <FormControlLabel
+                  control={<Checkbox checked={edges.roaming} onChange={handleEdgeChange} name="roaming" />}
+                  label="Roaming"
                 />
                 <FormControlLabel
                   control={<Checkbox checked={edges.dublin} onChange={handleEdgeChange} name="dublin" />}
@@ -128,10 +137,6 @@ export default function SettingsModal({
                 <FormControlLabel
                   control={<Checkbox checked={edges.frankfurt} onChange={handleEdgeChange} name="frankfurt" />}
                   label="Frankfurt"
-                />
-                <FormControlLabel
-                  control={<Checkbox checked={edges.roaming} onChange={handleEdgeChange} name="roaming" />}
-                  label="Roaming"
                 />
                 <FormControlLabel
                   control={<Checkbox checked={edges['sao-paulo']} onChange={handleEdgeChange} name="sao-paulo" />}

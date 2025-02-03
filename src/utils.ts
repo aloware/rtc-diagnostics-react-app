@@ -85,6 +85,7 @@ export const edgeNameMap = {
   singapore: 'Singapore',
   ashburn: 'Ashburn',
   roaming: 'Roaming',
+  umatilla: 'Umatilla',
   'ashburn-ix': 'Ashburn IX',
   'san-jose-ix': 'San Jose IX',
   'london-ix': 'London IX',

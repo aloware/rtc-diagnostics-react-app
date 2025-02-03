@@ -46,11 +46,7 @@ function App() {
       <CssBaseline />
       <AppBar position="static">
         <Toolbar>
-          <img
-            src="https://aloware.com/wp-content/uploads/2024/07/New-logo-final.svg"
-            style={{ maxHeight: '64px' }}
-            alt="Logo"
-          ></img>
+          <img src="logo.png" style={{ maxHeight: '64px' }} alt="Logo"></img>
         </Toolbar>
       </AppBar>
       <Container className={classes.container}>
