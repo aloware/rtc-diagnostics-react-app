@@ -11,9 +11,9 @@ exports.handler = function (context, event, callback) {
 
   const token = new AccessToken(context.ACCOUNT_SID, context.API_KEY, context.API_SECRET, {
     ttl: 60,
+    identity: context.VOICE_IDENTITY,
   });
   token.addGrant(voiceGrant);
-  token.identity = context.VOICE_IDENTITY;
 
   callback(null, { token: token.toJwt() });
 };
