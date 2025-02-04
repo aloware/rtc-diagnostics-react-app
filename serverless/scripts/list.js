@@ -13,12 +13,8 @@ async function getAppInfo() {
 
   const appInstance = client.serverless.services(app.sid);
   const [environment] = await appInstance.environments.list();
-  const variables = await appInstance.environments(environment.sid).variables.list();
-  const expiryVar = variables.find((v) => v.key === 'APP_EXPIRY');
-  const expiryDate = new Date(Number(expiryVar.value)).toString();
-
+  
   console.log('App deployed to: https://' + environment.domainName);
-  console.log(`This URL is for demo purposes only. It will expire on ${expiryDate}`);
 }
 
 if (require.main === module) {

@@ -48,10 +48,9 @@ async function deployFunctions() {
       API_KEY: api_key.sid,
       API_SECRET: api_key.secret,
       VOICE_IDENTITY: constants.VOICE_IDENTITY,
-      APP_EXPIRY: Date.now() + 1000 * 60 * 60 * 24 * 7, // One week
     },
     pkgJson: {},
-    functionsEnv: 'dev',
+    functionsEnv: process.env.FUNCTIONS_ENV || 'dev',
     assets,
     functions,
     serviceName: `${constants.SERVICE_NAME}-${getRandomString()}`,
